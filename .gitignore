@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+*/build/
+
+# Local SDK config
+local.properties
+
+# Kotlin
+.kotlin/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Generated captures and temp artifacts
+captures/
+
+# Keystores and signing
+*.jks
+*.keystore
+
+# Packaged exports
+*.zip

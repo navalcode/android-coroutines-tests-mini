@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Coroutine Tests Mini</string>
+    <string name="screen_title">Minimal Android sample for coroutine tests</string>
+    <string name="idle_message">Tap the button to trigger a coroutine-backed load.</string>
+    <string name="loading_message">Loading article...</string>
+    <string name="load_button">Load article</string>
+    <string name="success_message">Success: %1$s</string>
+    <string name="error_message">Error: %1$s</string>
+</resources>
