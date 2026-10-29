@@ -1,102 +1,35 @@
-# android-coroutines-tests-mini
+# Coroutines Tests Mini
 
-Proyecto Android pequeño para ver cómo testear coroutines y `StateFlow` en local, sin meter más piezas de las necesarias.
+[Español](README.es.md)
 
-La app hace una sola cosa: pulsas un botón, se lanza una carga y la UI pasa por `Idle`, `Loading` y `Success` o `Error`. Lo útil no es la pantalla, sino cómo están montados los tests.
+A small Android example for testing coroutines and `StateFlow` without a large framework. A minimal Views activity requests an article while the presentation moves through `Idle`, `Loading`, `Success` or `Error`.
 
-## Qué hay dentro
+The main learning material is the implementation and its tests: dispatcher injection, fake repositories, virtual time, cancellation and latest-query behavior.
 
-- Una `Activity` mínima para que el proyecto sea Android de verdad
-- Un `ViewModel` con `StateFlow<ArticleUiState>`
-- Un `UseCase`
-- Un `Repository`
-- Una implementación estática para la app
-- Una fake para tests
-- Varios tests locales sobre coroutines, `Flow` y cancelación
+## Read in this order
 
-## Estructura
+1. `ArticleUiState` and `ArticleViewModel` under `app/src/main/java/com/example/coroutinetests/presentation/`.
+2. `ArticleViewModelTest`: initial state, loading, success, error and cancellation.
+3. `LoadArticleUseCaseTest` and `FakeArticleRepository`: controlled results and delays without a mocking framework.
+4. `MainDispatcherRule`: install/reset a scheduler-controlled `Dispatchers.Main`.
+5. `ObserveSavedArticlesUseCaseTest`: several Flow emissions and their order.
+6. `ArticleSearchViewModelTest`: `collectLatest` cancels an obsolete search when a newer query arrives.
 
-```text
-app/src/main/java/com/example/coroutinetests/
-├── MainActivity.kt
-├── data/
-│   ├── ArticleRepository.kt
-│   └── StaticArticleRepository.kt
-├── domain/
-│   ├── Article.kt
-│   └── LoadArticleUseCase.kt
-└── presentation/
-    ├── ArticleUiState.kt
-    └── ArticleViewModel.kt
+Tests use `runTest`, `runCurrent` and `advanceUntilIdle` rather than wall-clock sleeps. Cancellation remains cancellation instead of becoming an error state. The repository boundary supports a static implementation in the app and fakes in tests.
 
-app/src/test/java/com/example/coroutinetests/
-├── domain/LoadArticleUseCaseTest.kt
-├── presentation/ArticleViewModelTest.kt
-├── rules/MainDispatcherRule.kt
-└── testdoubles/FakeArticleRepository.kt
+## Run
+
+Requires JDK 17, Android SDK 36 and API 24+ for installation. Open this repository in Android Studio or configure the SDK using untracked `local.properties`.
+
+```sh
+./gradlew :app:testDebugUnitTest :app:lintDebug :app:assembleDebug
+./gradlew :app:installDebug
 ```
 
-## Por dónde leerlo
+The Gradle 8.13 wrapper verifies its distribution SHA-256. The longer [Spanish guide](README.es.md) explains the examples and test decisions.
 
-Si quieres entenderlo rápido, este orden suele funcionar bien:
+## Validation scope
 
-1. `ArticleUiState`: define los estados que ve la UI.
-2. `ArticleViewModel`: enseña el flujo principal.
-3. `ArticleViewModelTest`: aquí está casi toda la gracia del ejemplo.
-4. `FakeArticleRepository`: explica cómo se simula éxito, error y delay sin mocks.
-5. `MainDispatcherRule`: deja claro cómo se controla `Dispatchers.Main` en tests.
+Nine JVM tests, lint and a debug APK build passed locally on 29 October 2026 with JDK 17. Lint reported no errors and 13 warnings, including dependency/target updates. No emulator UI suite or physical-device validation is claimed here.
 
-## Qué está intentando enseñar
-
-### El dispatcher no debería estar hardcodeado
-
-El `UseCase` recibe un dispatcher por constructor. Eso permite que en producción uses `Dispatchers.IO` y en tests uses un `TestDispatcher` controlado.
-
-### `runTest` cambia la forma de pensar el tiempo
-
-Aquí no hay `Thread.sleep()`. Los tests avanzan la ejecución con `runCurrent()` y `advanceUntilIdle()`. Esa es la parte que suele desbloquear muchos tests inestables.
-
-### `StateFlow` se comprueba como estado
-
-La UI no necesita saber todos los detalles internos de la coroutine. Necesita saber qué estado tiene ahora mismo. Por eso el foco está en `uiState.value`.
-
-### `collectLatest` sirve cuando lo último invalida lo anterior
-
-El ejemplo de búsqueda usa `collectLatest` para cancelar una búsqueda en curso cuando entra una query más nueva. Es un patrón muy habitual cuando la entrada del usuario cambia rápido.
-
-## Tests que merece la pena mirar
-
-### `LoadArticleUseCaseTest`
-
-Tiene dos casos:
-
-- Devuelve el artículo cuando el repositorio responde bien
-- Propaga el error cuando el repositorio falla
-
-Sirve para ver el caso más pequeño posible antes de subir al `ViewModel`.
-
-### `ArticleViewModelTest`
-
-Tiene cuatro comprobaciones:
-
-- Arranca en `Idle`
-- Pasa de `Loading` a `Success`
-- Pasa de `Loading` a `Error`
-- Mantiene la cancelación fuera del estado de error
-
-Es el archivo que mejor resume la intención del proyecto.
-
-### `ObserveSavedArticlesUseCaseTest`
-
-Muestra un caso simple de `Flow` con varias emisiones y comprobación del orden esperado.
-
-### `ArticleSearchViewModelTest`
-
-Muestra el caso de `collectLatest`: si entra una segunda query antes de terminar la primera, la primera se cancela y solo cuenta la última.
-
-## Ejecutarlo
-
-```bash
-./gradlew :app:testDebugUnitTest
-./gradlew :app:assembleDebug
-```
+This is an educational sample, with no production article service or store release. Its release configuration currently disables minification. The debug artifact lacks R8 metadata and does not demonstrate optimized release behavior.
