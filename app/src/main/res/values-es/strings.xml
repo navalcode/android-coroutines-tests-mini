@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Coroutine Tests Mini</string>
+    <string name="screen_title">Una petición.\nCuatro estados.</string>
+    <string name="screen_description">Observa el estado al cargar un artículo ficticio.</string>
+    <string name="state_sequence">Idle → Loading → Success / Error</string>
+    <string name="state_label">Estado actual</string>
+    <string name="idle_state">En espera</string>
+    <string name="loading_state">Cargando</string>
+    <string name="success_state">Completado</string>
+    <string name="error_state">Error</string>
+    <string name="idle_message">Pulsa para iniciar la carga.</string>
+    <string name="loading_message">Leyendo el artículo de demostración.</string>
+    <string name="load_button">Cargar artículo</string>
+    <string name="reload_button">Volver a cargar</string>
+    <string name="success_message">Artículo: %1$s</string>
+    <string name="error_message">La carga no pudo finalizar: %1$s</string>
+    <string name="example_scope">La demo devuelve un artículo fijo. Los tests también cubren errores y cancelación.</string>
+</resources>

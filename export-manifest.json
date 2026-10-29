@@ -1,0 +1,218 @@
+[
+  {
+    "path": ".github/workflows/checks.yml",
+    "sha256": "472a20388feb8ce34ab52836c50a0834798fc93604ccf57170b881d257eb72d3"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "c22fbe8709bc716f83d2c36a36dcabda95969fb96a5d367428162b268bb9b1bc"
+  },
+  {
+    "path": "DESIGN.md",
+    "sha256": "8eb3f36d175f1cf87e6e618e431d693dd2ecdbb05e20a5ff6a480a47a6a5223d"
+  },
+  {
+    "path": "README.es.md",
+    "sha256": "87a487ac062c94720082fca906a02ca7c599e5e4544d2cba65442ddaea56c5ae"
+  },
+  {
+    "path": "README.md",
+    "sha256": "6aebe022b16997aca9418bdfe81dcf39500d8157426263464b6e3e0a33c09864"
+  },
+  {
+    "path": "THIRD_PARTY.md",
+    "sha256": "979e30584c37a01575540e2e1ab59955b7a0f9eb0c96f2b58a22fa211b156a37"
+  },
+  {
+    "path": "app/build.gradle.kts",
+    "sha256": "f8dfaf52e3934fe09d711624ddd23e290b31844c5fe0eb808a648843f34d82b8"
+  },
+  {
+    "path": "app/proguard-rules.pro",
+    "sha256": "0ce773d299c8b25ff89faceafcb6ae51e6a9bc80310758ff7708cce83c3fbe22"
+  },
+  {
+    "path": "app/src/androidTest/java/com/example/coroutinetests/ArticleJourneyTest.kt",
+    "sha256": "2622437a519053cb5409817b27f10253316e94703cd985c2a3075d6c90e61cb2"
+  },
+  {
+    "path": "app/src/main/AndroidManifest.xml",
+    "sha256": "437dd85cd3039463587880d4db2545be078bca655d16f8fcde33106ff3eea496"
+  },
+  {
+    "path": "app/src/main/assets/licenses/Outfit-OFL.txt",
+    "sha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/MainActivity.kt",
+    "sha256": "7557df19cd478982a4bc66232087d173e31717816aeb861003844779cb53109d"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/data/ArticleRepository.kt",
+    "sha256": "92003da78c3b08b55a3e713f18b1df9648f1e530a0df4482f7e295bd867373f6"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/data/ArticleSearchRepository.kt",
+    "sha256": "698973e7492dbc1c31a4be874311621aa62b84315afcb7d4e48222aa9f432705"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/data/SavedArticlesRepository.kt",
+    "sha256": "ac7f7c16f6e96017581fe61a8f91444cbd49424767f7cb40cf016509a1fa8f0f"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/data/StaticArticleRepository.kt",
+    "sha256": "af3c51e63acc3808912f1236ddf5abfc8bbdec04ee4a6a9835a5b7ba069eff0b"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/domain/Article.kt",
+    "sha256": "85787fa5db169a8a55222bc29aac118ba42f78da70432f7926b1247110e7e480"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/domain/LoadArticleUseCase.kt",
+    "sha256": "c8ba8ecda699a49637074886d5a1f0ffb5a478a7bd5e9fd4cb54c3d11e2770f2"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/domain/ObserveSavedArticlesUseCase.kt",
+    "sha256": "d7961fb4f8decedd95e7f9f73aa32f40638c1f0a4b1b0526673e4d52c1a0f365"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/domain/SearchArticleUseCase.kt",
+    "sha256": "4f9a10bde3213a1cdd209d7a87d666282035715a490eefeabdc6300d658063df"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/presentation/ArticleSearchUiState.kt",
+    "sha256": "0d0b7f1a117f46bf6e5819ddbba8f66d62168c78f537b1b6680c506fee84ab9d"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/presentation/ArticleSearchViewModel.kt",
+    "sha256": "99bb25da366b83175db8be68a8b8b244742445d66f31e7d9eec126fbf090ce69"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/presentation/ArticleUiState.kt",
+    "sha256": "8b1b3fbd7443a94472515f08f88612b055cb3cfa9f830d92c97b9a6364065cc6"
+  },
+  {
+    "path": "app/src/main/java/com/example/coroutinetests/presentation/ArticleViewModel.kt",
+    "sha256": "cec24ed54f7c25dee35de705ef8a1a232b88b53e26af5723327e51da9512790c"
+  },
+  {
+    "path": "app/src/main/res/color/button_background.xml",
+    "sha256": "b837ae416f81ec1d76f9f0d9bd541617f075b4e2a927a50953d94d018f5dbc51"
+  },
+  {
+    "path": "app/src/main/res/color/button_text.xml",
+    "sha256": "54c837da96b1f83e54df1b01a80a090b9f13bc380a5879a7ca90c0e8aa7d58fb"
+  },
+  {
+    "path": "app/src/main/res/drawable/ic_mini.xml",
+    "sha256": "08296684bce09275839077ed4841bd2c0af88ea9379a831deb6109f1f749434c"
+  },
+  {
+    "path": "app/src/main/res/font/outfit_bold.ttf",
+    "sha256": "f8431eaa5623b80f6b7047ff39ceea1b623cf0ad9bb4044da05afafdcdb9f7b6"
+  },
+  {
+    "path": "app/src/main/res/font/outfit_regular.ttf",
+    "sha256": "5516f593c5ca20ebf130fa5b83462986daf73dabc66fef7c6ad55284b540079d"
+  },
+  {
+    "path": "app/src/main/res/font/outfit_semibold.ttf",
+    "sha256": "6d2ba45801a26c64a741bd8fb86f04ff9acefa35fadb41f1ccbd1e43ff5f25b4"
+  },
+  {
+    "path": "app/src/main/res/layout/activity_main.xml",
+    "sha256": "9a31af991e2acc9f4154b52abc91bc6cc82aa2dd21e8c390f8796f832f0ce6f3"
+  },
+  {
+    "path": "app/src/main/res/values-es/strings.xml",
+    "sha256": "82943f948ffefa81e05b0247cb2b8d4cb74808b3523d0c95b573c38b257af76a"
+  },
+  {
+    "path": "app/src/main/res/values-night/bools.xml",
+    "sha256": "0e975f4fe835d5fb6e921c27c621d1a8fc6f994a88a251000b2cc4c9b099751a"
+  },
+  {
+    "path": "app/src/main/res/values-night/colors.xml",
+    "sha256": "d9d936c4c988a14bc288e9dc7f6544006ea18ba16edb3227939c38320161a37e"
+  },
+  {
+    "path": "app/src/main/res/values-v27/themes.xml",
+    "sha256": "804869e12671a502915dd95cb0e29c0c3fb182a50fcf993a3aae74647b0d106d"
+  },
+  {
+    "path": "app/src/main/res/values/bools.xml",
+    "sha256": "b829cc8d232b8568a8206dfc7f6d8121d567e4b1121881ef7af6356e5bbd292c"
+  },
+  {
+    "path": "app/src/main/res/values/colors.xml",
+    "sha256": "03155a2999b3e551906ac500591b54b8d6d2ce3b786a4e123f953e378b5c7f1b"
+  },
+  {
+    "path": "app/src/main/res/values/strings.xml",
+    "sha256": "590d96f28f8b57382278305747905e2480d71f36cf4e3857b0944b8f8d0c6d85"
+  },
+  {
+    "path": "app/src/main/res/values/themes.xml",
+    "sha256": "340cb33977e2587cd5ed8f279c463700bba3f61b5d2c19a9eebe25c66e73ac0d"
+  },
+  {
+    "path": "app/src/test/java/com/example/coroutinetests/domain/LoadArticleUseCaseTest.kt",
+    "sha256": "4bc8d04e449f0cd2cc3316891f0c755160e55d5b6b623cb4df63b9389f07bf22"
+  },
+  {
+    "path": "app/src/test/java/com/example/coroutinetests/domain/ObserveSavedArticlesUseCaseTest.kt",
+    "sha256": "581ab7a80cbf737c2cd2733ec54f98c0f027b6610f6c5817cc24cc89b38f7a6e"
+  },
+  {
+    "path": "app/src/test/java/com/example/coroutinetests/presentation/ArticleSearchViewModelTest.kt",
+    "sha256": "284c9acb0eee0f38a8977f411f05e0b5eeed89d09bcd19b5ca8af42c8ff5bbf8"
+  },
+  {
+    "path": "app/src/test/java/com/example/coroutinetests/presentation/ArticleViewModelTest.kt",
+    "sha256": "a8e07c2e64643a7d29d4f6ef7255d83aefa662c2d9a0c1f0a4cbf1ca57eb5dbf"
+  },
+  {
+    "path": "app/src/test/java/com/example/coroutinetests/rules/MainDispatcherRule.kt",
+    "sha256": "af08643ea15a9ca17b5463d4dc9c81979ab191debedf5e4bfc03e3b89b8d1bb2"
+  },
+  {
+    "path": "app/src/test/java/com/example/coroutinetests/testdoubles/FakeArticleRepository.kt",
+    "sha256": "84f0903f63062b99a1d890fe62e60bde7f63bea09f7fce1295a6d0534e69e782"
+  },
+  {
+    "path": "build.gradle.kts",
+    "sha256": "e385477be14ee87a0149c2c3fcf85ac5b79764c3808ae51dd56101826417e0c6"
+  },
+  {
+    "path": "docs/images/screen-en.png",
+    "sha256": "30f57bda12ae8948be094501873a1c4892bafb40d27a71be573604a2edc59fec"
+  },
+  {
+    "path": "docs/images/screen-es.png",
+    "sha256": "0f40a13c65b15bcbef7cc89db9aa1784b67ecb93f96e651ede3522db8767c8f0"
+  },
+  {
+    "path": "gradle.properties",
+    "sha256": "678c35a27eeda302d6a960484179d118d08fb1edf05c1b40745bc7aed6e88f03"
+  },
+  {
+    "path": "gradle/wrapper/gradle-wrapper.jar",
+    "sha256": "76805e32c009c0cf0dd5d206bddc9fb22ea42e84db904b764f3047de095493f3"
+  },
+  {
+    "path": "gradle/wrapper/gradle-wrapper.properties",
+    "sha256": "a11593c2d77f2607db099a90eb84fe52bb0fa807a99f45a8f998bb46f8896201"
+  },
+  {
+    "path": "gradlew",
+    "sha256": "3238afb2aed5cb16eb7d6718077e7138059108f007b54179e9cc157c5a6e0e89"
+  },
+  {
+    "path": "gradlew.bat",
+    "sha256": "1d297e00bd21de3ace22b4d7f2de1f9dfa858883d66bbf7c1ccbecccec8f4f3b"
+  },
+  {
+    "path": "settings.gradle.kts",
+    "sha256": "de1b314902b040241678ea6e7a963804297bce97a9032214182528070b905fe8"
+  }
+]

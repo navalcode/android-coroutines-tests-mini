@@ -1,9 +1,18 @@
 <resources>
     <string name="app_name">Coroutine Tests Mini</string>
-    <string name="screen_title">Minimal Android sample for coroutine tests</string>
-    <string name="idle_message">Tap the button to trigger a coroutine-backed load.</string>
-    <string name="loading_message">Loading article...</string>
+    <string name="screen_title">One request.\nFour states.</string>
+    <string name="screen_description">Observe the state while loading a fictional article.</string>
+    <string name="state_sequence">Idle → Loading → Success / Error</string>
+    <string name="state_label">Current state</string>
+    <string name="idle_state">Idle</string>
+    <string name="loading_state">Loading</string>
+    <string name="success_state">Success</string>
+    <string name="error_state">Error</string>
+    <string name="idle_message">Press to start the load.</string>
+    <string name="loading_message">Reading the demo article.</string>
     <string name="load_button">Load article</string>
-    <string name="success_message">Success: %1$s</string>
-    <string name="error_message">Error: %1$s</string>
+    <string name="reload_button">Load again</string>
+    <string name="success_message">Article: %1$s</string>
+    <string name="error_message">The load could not finish: %1$s</string>
+    <string name="example_scope">The demo returns one fixed article. Tests also cover errors and cancellation.</string>
 </resources>

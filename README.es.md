@@ -4,7 +4,15 @@
 
 Proyecto Android pequeño para ver cómo testear coroutines y `StateFlow` en local, sin meter más piezas de las necesarias.
 
-La app hace una sola cosa: pulsas un botón, se lanza una carga y la UI pasa por `Idle`, `Loading` y `Success` o `Error`. Lo útil no es la pantalla, sino cómo están montados los tests.
+La app permite solicitar un artículo fijo y observar `Idle`, `Loading` y `Success`. El contrato incluye `Error`, ejercitado con un fake en los tests. El ejemplo conecta una pantalla pequeña con pruebas de estado, tiempo virtual y cancelación.
+
+## Usar la pantalla
+
+<img src="docs/images/screen-es.png" alt="Coroutines Tests Mini con su estado inicial y acción de carga en un emulador Android" width="300">
+
+Una pantalla desplazable separa estado, resultado y acción principal. La respuesta de carga es inmediata y **el botón queda deshabilitado hasta terminar esa petición**. Éxito ofrece Volver a cargar; la recreación conserva el resultado del ViewModel. Los cambios de estado usan una región accesible de anuncio cortés. Hay recursos españoles con fallback inglés; el artículo fijo original conserva su inglés.
+
+La app instalada devuelve siempre ese artículo estático tras un breve retardo. Los tests JVM ejercitan errores, cancelación y sustitución de búsquedas obsoletas, sin simular una red ni añadir controles a la pantalla. Ver [decisiones de pantalla](DESIGN.md) y [avisos de terceros](THIRD_PARTY.md).
 
 ## Qué hay dentro
 
@@ -105,6 +113,12 @@ Muestra el caso de `collectLatest`: si entra una segunda query antes de terminar
 
 ## Verificación del escaparate
 
-Comprobado el 29 de octubre de 2026: nueve tests JVM, lint sin errores (13 avisos) y APK debug. No se afirma una suite UI en emulador o release optimizada.
+Comprobado localmente el 29 de octubre de 2026: **nueve tests JVM y tres recorridos de MainActivity real en emulador API 37**, además de lint y builds debug/tests con JDK 17. Los recorridos comprueban Cargando inmediato/botón deshabilitado, éxito confirmado, recreación y una nueva petición tras finalizar la anterior. Los tres pasan también con texto al 150% en 360×800 dp. El recorrido de carga pasa además en vertical inglés/español, oscuro español y horizontal inglés. Las imágenes son capturas reales del emulador.
 
-El wrapper comprueba SHA-256 de Gradle 8.13. La CI se comprueba por separado; las evidencias anteriores son locales. Se conservan las licencias existentes.
+Lint no informa errores y conserva diez avisos de versiones/target. La CI enlazada ejecuta JVM, lint y build debug; los recorridos nativos son locales. Para ejecutarlos, usar un único emulador/dispositivo API 33+ (la regla de idioma utiliza la API de locale por aplicación):
+
+```sh
+./gradlew :app:assembleDebugAndroidTest :app:connectedDebugAndroidTest
+```
+
+La app declara API 24+, pero la revisión no acredita todos los Android soportados, TalkBack, dispositivos físicos ni aprobación de tienda. El debug contiene unos 12,14 MB DEX sin comprimir y no contiene librerías nativas que alinear. Falta metadata R8 y la minificación release sigue desactivada; no se acredita release optimizada ni tasa de optimización. El wrapper verifica SHA-256 de Gradle 8.13. Se conservan licencias y atribuciones existentes.

@@ -1,0 +1,3 @@
+<resources><style name="Theme.CoroutineTestsMini" parent="Base.Theme.CoroutineTestsMini">
+    <item name="android:navigationBarColor">@color/paper</item><item name="android:windowLightNavigationBar">@bool/light_system_bars</item>
+</style></resources>
