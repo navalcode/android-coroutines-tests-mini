@@ -1,6 +1,6 @@
 # Coroutines Tests Mini
 
-[Español](README.es.md)
+[Español](README.es.md) · [![CI](https://github.com/navalcode/android-coroutines-tests-mini/actions/workflows/checks.yml/badge.svg)](https://github.com/navalcode/android-coroutines-tests-mini/actions/workflows/checks.yml)
 
 A small Android example for testing coroutines and `StateFlow` without a large framework. A minimal Views activity requests an article while the presentation moves through `Idle`, `Loading`, `Success` or `Error`.
 

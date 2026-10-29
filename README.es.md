@@ -1,4 +1,4 @@
-[English](README.md) · **Español**
+[English](README.md) · **Español** · [![CI](https://github.com/navalcode/android-coroutines-tests-mini/actions/workflows/checks.yml/badge.svg)](https://github.com/navalcode/android-coroutines-tests-mini/actions/workflows/checks.yml)
 
 # android-coroutines-tests-mini
 
