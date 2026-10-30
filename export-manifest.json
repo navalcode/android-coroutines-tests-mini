@@ -9,15 +9,15 @@
   },
   {
     "path": "DESIGN.md",
-    "sha256": "8eb3f36d175f1cf87e6e618e431d693dd2ecdbb05e20a5ff6a480a47a6a5223d"
+    "sha256": "8bd35747789aaec00d987102ab3c087f4a34422598dd3fce6e3393c1e4f47847"
   },
   {
     "path": "README.es.md",
-    "sha256": "87a487ac062c94720082fca906a02ca7c599e5e4544d2cba65442ddaea56c5ae"
+    "sha256": "417b7f72d55f93e579ea314f0eae2ca92413523e3a753e1d7b8d47067483bfa0"
   },
   {
     "path": "README.md",
-    "sha256": "6aebe022b16997aca9418bdfe81dcf39500d8157426263464b6e3e0a33c09864"
+    "sha256": "f555475a273e29aa11d98342cf749baeaab133afb4d86ce1d1075ce25b123c3a"
   },
   {
     "path": "THIRD_PARTY.md",
@@ -125,7 +125,7 @@
   },
   {
     "path": "app/src/main/res/values-es/strings.xml",
-    "sha256": "82943f948ffefa81e05b0247cb2b8d4cb74808b3523d0c95b573c38b257af76a"
+    "sha256": "3a0a0b9edcd1d77d0fca7aa01ec726988a128c3d01995c7f24db347b469efff0"
   },
   {
     "path": "app/src/main/res/values-night/bools.xml",
@@ -149,7 +149,7 @@
   },
   {
     "path": "app/src/main/res/values/strings.xml",
-    "sha256": "590d96f28f8b57382278305747905e2480d71f36cf4e3857b0944b8f8d0c6d85"
+    "sha256": "138b0ac1b0e0f0355128e75618c006b8640561e3fadda442efac1d063270bba8"
   },
   {
     "path": "app/src/main/res/values/themes.xml",
@@ -184,12 +184,20 @@
     "sha256": "e385477be14ee87a0149c2c3fcf85ac5b79764c3808ae51dd56101826417e0c6"
   },
   {
+    "path": "docs/TESTING.es.md",
+    "sha256": "dea78b54e854273b7bc83e1b38af11fd5ec34d162ca4c28955131fce04ef0068"
+  },
+  {
+    "path": "docs/VERIFICATION.md",
+    "sha256": "5098dd07d9f4161e9a232981684fecfc824dd59bd6483ab5dc817d5379779fbf"
+  },
+  {
     "path": "docs/images/screen-en.png",
-    "sha256": "30f57bda12ae8948be094501873a1c4892bafb40d27a71be573604a2edc59fec"
+    "sha256": "4a83c36576c69fed5179fd2a765f3899616a2e8335ced404c141c7b1078ef047"
   },
   {
     "path": "docs/images/screen-es.png",
-    "sha256": "0f40a13c65b15bcbef7cc89db9aa1784b67ecb93f96e651ede3522db8767c8f0"
+    "sha256": "6490534232bba2c29157db059751581e2f68240b8bec37c23329f4c1505a9f5b"
   },
   {
     "path": "gradle.properties",

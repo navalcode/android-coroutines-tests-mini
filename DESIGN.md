@@ -16,6 +16,6 @@ The result is a polite live accessibility region with related text grouped for s
 
 TextAppearance selects each Outfit weight explicitly. A global theme font would override those role-specific choices in Views; runtime checks confirm title weight 700 and state weight 600 at both standard and 150% text.
 
-## Checked scope
+## Verification
 
-Nine JVM tests; three real MainActivity journeys at API 37, also at 150% text/360×800 dp; selected load journey in EN/ES portrait, ES dark and EN landscape. Actual screenshots are emulator output. Lint has no errors and ten existing target/version notices. CI runs JVM/lint/debug build; native checks are local. API 24 is the declared minimum, not a newly tested lower-platform result. Debug has no native libraries; release minification remains disabled. No TalkBack, physical-device, optimized-release or store claim is made.
+See [VERIFICATION.md](docs/VERIFICATION.md) for dated test/build results, native journeys, screenshots and limits. The current editorial review replaces vague headings with specific experiments and actions. API names and stable trace messages remain identifiable.
